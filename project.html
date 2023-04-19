@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> My Projects </title>
+
+
+    <!-- FontAwesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon Link  -->
+    <link rel="shortcut icon" href="images/work.png" type="image/x-icon">
+
+    <!-- CSS Link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: var(--tertiary-color);
+        }
+
+        h1.head {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 45px;
+            color: var(--white-color);
+
+        }
+
+        section.project {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .project-boxes {
+            width: 85%;
+            background: var(--tertiary-color);
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .box {
+            height: 250px;
+            width: 350px;
+            background: var(--grey-color);
+            border-radius: 30px;
+            margin: 20px 10px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            border-radius: 20px;
+            cursor: pointer;
+            z-index:0;
+        }
+
+        #box1{
+            background: url('images/project1.jpg');
+        }
+        #box2{
+            background: url('images/project2.jpg');
+        }
+        #box3{
+            background: url('images/project3.jpg');
+        }
+        #box4{
+            background: url('images/project4.jpg');
+        }
+        #box5{
+            background: url('images/project5.jpg');
+        }
+        #box6{
+            background: url('images/project6.jpg');
+        }
+
+        .box::before {
+            content: " Project ";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            background: rgba(42, 152, 255, 0.651);
+            opacity: 0;
+            color: #fff;
+            transition: opacity .5s ease;
+            font-size: 50px;
+        }
+
+        .box:hover::before {
+            opacity: 1;
+        }
+
+        @media screen and (max-width:700px) {
+            h1.head {
+                font-size: 35px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label for="" class="logo"> Portfolio </label>
+        <ul>
+            <li> <i class="fa-solid fa-house"></i> <a href="index.html">Home </a></li>
+                <li> <i class="fa-solid fa-user"></i> <a href="about.html">About </a></li>
+                <li> <i class="fa-solid fa-briefcase active"></i> <a href="project.html" class="active">Projects </a></li>
+                <li> <i class="fa-solid fa-comments"></i> <a href="contact.html">Contact </a></li>
+        </ul>
+    </nav>
+
+
+    <div class="color-switcher">
+        <div class="switcher-btn">
+            <i class="fas fa-cog"></i>
+        </div>
+
+        <h3> Select Color </h3>
+        <div class="theme-btn-container">
+            <span class="theme-btn" data-color="#ff0000" style=" background: red"></span>
+            <span class="theme-btn" data-color="#00ff04" style=" background: #00ff04"></span>
+            <span class="theme-btn" data-color="rgb(0, 147, 245)" style=" background: rgb(0, 147, 245)"></span>
+            <span class="theme-btn" data-color="#ff00bb" style=" background: #ff00bb"></span>
+            <span class="theme-btn" data-color="#00ffee" style=" background: #00ffee"></span>
+            <span class="theme-btn" data-color="blueviolet" style=" background: blueviolet"></span>
+            <span class="theme-btn" data-color="gold" style=" background: gold"></span>
+        </div>
+    </div>
+
+
+    <h1 class="head"> My <span>Projects</span> </h1>
+    <section class="project">
+        <div class="project-boxes">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+        </div>
+    </section>
+
+    <script src="js/jquery.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

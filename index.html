@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Portfolio | Vinay kumar</title>
+
+    <!-- FontAwesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon Link  -->
+    <link rel="shortcut icon" href="images/user.png" type="image/x-icon">
+
+    <!-- CSS Link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @media screen and (max-width:700px) {
+
+            header .right img {
+                display: none;
+            }
+
+
+            header {
+                flex-direction: column;
+                margin-top: 100px;
+            }
+
+            header .left {
+                width: 100%;
+                padding-left: 30px;
+                margin-top: 60px;
+            }
+
+            header .left h2 {
+                font-size: 25px;
+            }
+
+            header .left h1 {
+                font-size: 2rem;
+            }
+
+            header .left button {
+                width: 170px;
+                height: 40px;
+                font-size: 17px;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+
+            header .left {
+                margin-top: 20px;
+                padding-left: 50px;
+                height: auto;
+            }
+
+
+            header .left h2 {
+                font-size: 25px;
+            }
+
+            header .left h1 {
+                font-size: 2rem;
+            }
+
+
+            header .left button {
+                width: 160px;
+                height: 50px;
+                font-size: 18px;
+            }
+
+            header .right img {
+                height: 330px;
+                margin-left: 30px;
+                border-radius: 20px;
+                box-shadow: 4px 4px 15px -2px #000e25;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <input type="checkbox" name="" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label for="" class="logo"> Portfolio </label>
+            <ul>
+                <li> <i class="fa-solid fa-house active"></i> <a href="index.html" class="active">Home </a></li>
+                <li> <i class="fa-solid fa-user"></i> <a href="about.html">About </a></li>
+                <li> <i class="fa-solid fa-briefcase"></i> <a href="project.html">Projects </a></li>
+                <li> <i class="fa-solid fa-comments"></i> <a href="contact.html">Contact </a></li>
+            </ul>
+        </nav>
+
+
+        <div class="color-switcher">
+            <div class="switcher-btn">
+                <i class="fas fa-cog"></i>
+            </div>
+
+            <h3> Select Color </h3>
+            <div class="theme-btn-container">
+                <span class="theme-btn" data-color="#ff0000" style=" background: red"></span>
+                <span class="theme-btn" data-color="#00ff04" style=" background: #00ff04"></span>
+                <span class="theme-btn" data-color="rgb(0, 147, 245)" style=" background: rgb(0, 147, 245)"></span>
+                <span class="theme-btn" data-color="#ff00bb" style=" background: #ff00bb"></span>
+                <span class="theme-btn" data-color="#00ffee" style=" background: #00ffee"></span>
+                <span class="theme-btn" data-color="blueviolet" style=" background: blueviolet"></span>
+                <span class="theme-btn" data-color="gold" style=" background: gold"></span>
+            </div>
+        </div>
+
+
+        <header>
+            <div class="left">
+                <h2> HELLO ! </h2>
+                <h1> I'm <span> VINAY KUMAR</span> </h1>
+                <p>I'm a Front‑end developer focused on crafting clean & user‑friendly
+                    experiences, I am passionate about building excellent websites
+                    that improves the lives of those around me.</p>
+                <a href="Vinay-kumar-resume.pdf" target="_blank"><button>Download CV</button></a>
+                <!-- <button type=submit class="btn btn-danger" onclick=" window.open('file:////C:\Users\data'); return true;"> PDF </button> -->
+            </div>
+            <div class="right">
+                <img src="images/Group 1.png" alt="">
+            </div>
+
+        </header>
+    </main>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

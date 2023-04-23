@@ -79,12 +79,44 @@ nav ul li a {
     color: var(--white-color);
     padding: 7px 13px;
     border-radius: 5px;
+    position: relative;
 }
 
-nav ul li a.active,
+/* nav ul li a.active,
 nav ul li a:hover {
     background: var(--darkest-color);
     transition: .5s;
+} */
+
+nav ul li a::after,
+nav ul li a::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+nav ul li a::before {
+  bottom: -3px;
+  transform-origin: right;
+}
+nav ul li a::after {
+  top: -3px;
+  transform-origin: left;
+}
+nav ul li a:hover::after,
+nav ul li a:hover::before {
+  transform: scaleX(1);
+}
+nav ul li a:hover {
+  color: var(--white-color);
+}
+nav ul li a.active::before {
+    transform: scaleX(1);
 }
 
 .checkbtn {
@@ -203,7 +235,7 @@ header .left button {
     font-size: 20px;
     background: var(--primary-color);
     color: var(--white-color);
-    border: none;
+    border: 2px solid var(--primary-color);
     outline: none;
     margin-top: 15px;
     transition: all .5s;
@@ -211,7 +243,8 @@ header .left button {
 
 header .left button:hover {
     cursor: pointer;
-    background: var(--secondary-color);
+    background: transparent;
+    color: var(--primary-color);
 }
 
 span {
@@ -268,12 +301,12 @@ header .right img {
 .color-switcher .switcher-btn {
     position: absolute;
     top: 0;
-    left: -75px;
+    left: -55px;
     color: var(--primary-color);
     background: var(--darkest-color);
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 20px; */
+    font-size: 20px;
 
 }
 

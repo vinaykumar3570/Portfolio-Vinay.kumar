@@ -142,19 +142,19 @@ nav ul li a.active::before {
 
     nav ul li a {
         font-size: 20px;
+        padding: 20px 0;
     }
 
     nav ul li i.fa-solid {
         display: block;
         color: var(--white-color);
-        margin-bottom: 15px;
+        margin-top: 15px;
         transition: all .5s;
+        padding: 0 10px;
+
     }
 
-    nav ul li i.active,
-    nav ul li i.hover {
-        color: var(--primary-color);
-    }
+
 
     .checkbtn {
         display: block;
@@ -185,11 +185,7 @@ nav ul li a.active::before {
         font-size: 25px;
     }
 
-    nav ul li a.active,
-    nav ul li a:hover {
-        background: none;
-        color: var(--primary-color);
-    }
+
 
     #check:checked~ul {
         left: 0;

@@ -6,6 +6,7 @@
     text-decoration: none;
     list-style: none;
     letter-spacing: 1.1px;
+    user-select: none;
 }
 
 :root {
@@ -51,7 +52,7 @@ nav {
 
 label.logo {
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 80px;
     font-weight: bold;
     padding: 0 80px;
@@ -75,9 +76,9 @@ nav ul li i.fa-solid {
 }
 
 nav ul li a {
-    font-size: 27px;
+    font-size: 22px;
     color: var(--white-color);
-    padding: 7px 13px;
+    padding: 7px ;
     border-radius: 5px;
     position: relative;
 }
@@ -95,6 +96,7 @@ nav ul li a::before {
   top: 100%;
   left: 0;
   width: 100%;
+  margin: 0 auto;
   height: 3px;
   background: var(--primary-color);
   transform: scaleX(0);
@@ -210,24 +212,24 @@ header .left {
 }
 
 header .left h2 {
-    font-size: 240%;
+    font-size: 180%;
 }
 
 header .left h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     margin: 10px 0;
 }
 
 header .left p {
-    font-size: 22px;
+    font-size: 1.2rem;
     font-weight: 100;
     letter-spacing: 1.1px;
     line-height: 33px;
 }
 
 header .left button {
-    width: 35%;
-    height: 60px;
+    width: 30%;
+    height: 50px;
     font-size: 20px;
     background: var(--primary-color);
     color: var(--white-color);

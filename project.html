@@ -30,9 +30,40 @@
         h1.head {
             text-align: center;
             margin-top: 30px;
-            font-size: 45px;
+            font-size: 35px;
             color: var(--white-color);
 
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+            height: 3px;
+            color: white;
+        }
+
+        h1.head:before {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 200px;
+            border-radius: 50px;
+            background: var(--primary-color);
+            margin: 0 auto;
+            transform: translateY(54px);
+        }
+
+        h1.head:after {
+            content: '';
+            display: block;
+            height: 10px;
+            width: 50px;
+            border-radius: 50px;
+            background: var(--primary-color);
+            margin: 0 auto;
+            transform: translateY(6px);
         }
 
         section.project {
@@ -63,27 +94,37 @@
             position: relative;
             border-radius: 20px;
             cursor: pointer;
-            z-index:0;
+            z-index: 0;
         }
 
-        #box1{
+        #box1 {
+            background: url('images/project1.PNG');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        #box2 {
             background: url('images/project.webp');
         }
-        #box2{
+
+        #box3 {
             background: url('images/project.webp');
         }
-        #box3{
+
+        #box4 {
             background: url('images/project.webp');
         }
-        #box4{
+
+        #box5 {
             background: url('images/project.webp');
         }
-        #box5{
+
+        #box6 {
             background: url('images/project.webp');
         }
-        #box6{
-            background: url('images/project.webp');
-        }
+
 
         .box::before {
             content: " Project ";
@@ -98,19 +139,22 @@
             opacity: 0;
             color: #fff;
             transition: opacity .5s ease;
-            font-size: 50px;
+            font-size: 30px;
+        }
+
+        #box1::before {
+            content: " A Simple Calculator ";
         }
 
         .box:hover::before {
-            opacity: .6;
+            opacity: .8;
         }
 
         @media screen and (max-width:700px) {
             h1.head {
-                font-size: 35px;
+                font-size: 25px;
             }
         }
-
     </style>
 </head>
 
@@ -123,9 +167,9 @@
         <label for="" class="logo"> Portfolio </label>
         <ul>
             <li> <i class="fa-solid fa-house"></i> <a href="index.html">Home </a></li>
-                <li> <i class="fa-solid fa-user"></i> <a href="about.html">About </a></li>
-                <li> <i class="fa-solid fa-briefcase active"></i> <a href="project.html" class="active">Projects </a></li>
-                <li> <i class="fa-solid fa-comments"></i> <a href="contact.html">Contact </a></li>
+            <li> <i class="fa-solid fa-user"></i> <a href="about.html">About </a></li>
+            <li> <i class="fa-solid fa-briefcase active"></i> <a href="project.html" class="active">Projects </a></li>
+            <li> <i class="fa-solid fa-comments"></i> <a href="contact.html">Contact </a></li>
         </ul>
     </nav>
 
@@ -164,7 +208,9 @@
     <script src="js/script.js"></script>
 
     <!-- jQuery Link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </body>
 

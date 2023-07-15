@@ -16,13 +16,6 @@
 
     $(document).ready(function () {
         $(".fa-solid").click(function () {
-            if ($(this).hasClass('fa-bars'))
-            {
-
-                $(this).switchClass("fa-bars", "fa-xmark");
-            } else
-            {
-                $(this).switchClass("fa-xmark", "fa-bars");
-            }
+            $(this).toggleClass("fa-xmark");
         })
     });

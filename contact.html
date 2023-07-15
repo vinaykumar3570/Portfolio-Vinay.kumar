@@ -151,7 +151,7 @@
             color: rgba(211, 211, 211, 0.555);
         }
 
-        @media screen and (max-width:700px) {
+        @media screen and (max-width:574px) {
 
 
             .contact {
@@ -178,13 +178,25 @@
 
         }
 
-        @media screen and (max-width:1000px) {
+        @media screen and (max-width:990px) and (min-width:575px) {
+            .contact{
+                flex-direction: column;
+            }
             .contact .left {
-                width: 40%;
+                width: 100%;
+                /* border: 2px solid red; */
+                align-items: flex-start;
+                padding-left: 100px;
+            }
+            .contact .right{
+                width: 100%;
+                /* border: 2px solid yellow; */
+                padding: 0 70px;
             }
             .link-box h1 {
                 font-size: 25px;
                 margin-top: 15px;
+                margin-bottom: 30px;
             }
 
             .link-box .social-links {

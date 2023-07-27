@@ -7,6 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us</title>
 
+
+    <!-- Scroll Animation CSS link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
     <!-- FontAwesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -17,220 +23,27 @@
     <!-- CSS Link  -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Contact CSS link  -->
+    <link rel="stylesheet" href="css/contact.css">
 
 
-    <style>
-        body {
-            background: var(--tertiary-color);
-        }
-
-        .contact {
-            height: auto;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-        }
-
-        .contact .left {
-            width: 30%;
-            height: 90%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
-        }
-
-        .contact .left .link-box {
-            height: 450px;
-            width: 350px;
-        }
-
-        .link-box h1 {
-            font-size: 35px;
-            color: var(--white-color);
-            /* border: 2px solid red; */
-            width: fit-content;
-        }
-        .link-box h1:after{
-            content: '';
-            display: block;
-            height: 3px ;
-            width: 200px;
-            border-radius: 50px;
-            background: var(--primary-color);
-            transform: translateY(5px);
-        }
-
-        .link-box .social-links {
-            margin: 50px 20px;
-        }
-
-        .social-links h3 {
-            margin: 0 10px 20px 0;
-            color: var(--light-grey-color);
-            letter-spacing: 1.1px;
-            font-weight: 100;
-
-        }
-
-        .social-links h3.home {
-            line-height: 30px;
-        }
-
-        .social-links h3 i {
-            cursor: pointer;
-            margin-right: 10px;
-            color: var(--primary-color);
-        }
-
-
-        .contact .right {
-            width: 50%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        form {
-            height: 80%;
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .text {
-            border: none;
-            margin-bottom: 40px;
-            border-radius: 5px;
-            background: var(--darkest-color);
-            outline: none;
-            font-size: 18px;
-            color: var(--white-color);
-            font-weight: 100;
-            letter-spacing: 1.1px;
-        }
-
-        input {
-            height: 45px;
-            padding: 0 15px;
-        }
-
-        textarea {
-            padding: 10px 15px;
-            resize: none;
-        }
-
-        input:focus,
-        textarea:focus {
-            box-shadow: 1px 1px 8px var(--primary-color);
-        }
-
-        form button {
-            height: 45px;
-            font-size: 18px;
-            background: var(--primary-color);
-            border: noen;
-            border: 2px solid var(--primary-color);
-            outline: none;
-            border-radius: 5px;
-            color: var(--white-color);
-            transition: all .5s;
-        }
-
-        form button:hover {
-            background: transparent;
-            color: var(--primary-color);
-            cursor: pointer;
-        }
-
-        ::placeholder {
-            color: rgba(211, 211, 211, 0.555);
-        }
-
-        @media screen and (max-width:574px) {
-
-
-            .contact {
-                flex-direction: column;
-                margin-top: 50px;
-            }
-
-            .link-box h1 {
-                text-align: center;
-                font-size: 25px;
-            }
-
-            .contact .right {
-                width: 90%;
-                height: auto;
-            }
-
-            form button {
-                height: 50px;
-                margin-bottom: 50px;
-
-            }
-
-
-        }
-
-        @media screen and (max-width:990px) and (min-width:575px) {
-            .contact{
-                flex-direction: column;
-            }
-            .contact .left {
-                width: 100%;
-                /* border: 2px solid red; */
-                align-items: flex-start;
-                padding-left: 100px;
-            }
-            .contact .right{
-                width: 100%;
-                /* border: 2px solid yellow; */
-                padding: 0 70px;
-            }
-            .link-box h1 {
-                font-size: 25px;
-                margin-top: 15px;
-                margin-bottom: 30px;
-            }
-
-            .link-box .social-links {
-                margin: 20px 20px;
-            }
-
-            form {
-                width: 90%;
-            }
-
-            .text {
-                margin-bottom: 20px;
-                font-size: 17px;
-            }
-        }
-    </style>
 </head>
 
 <body>
     <!-- Navbar Section  -->
 
     <nav>
-        <nav>
-            <input type="checkbox" name="" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <label for="" class="logo"> Portfolio </label>
-            <ul>
-                <li> <i class="fa-solid fa-house"></i> <a href="index.html">Home </a></li>
-                <li> <i class="fa-solid fa-user"></i> <a href="about.html">About </a></li>
-                <li> <i class="fa-solid fa-briefcase"></i> <a href="project.html">Projects </a></li>
-                <li> <i class="fa-solid fa-comments active"></i> <a href="contact.html" class="active">Contact </a></li>
-            </ul>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <label for="" class="logo"> Portfolio </label>
+        <ul>
+            <li> <i class="fa-solid fa-house"></i> <a href="index.html">Home </a></li>
+            <li> <i class="fa-solid fa-user"></i> <a href="about.html">About </a></li>
+            <li> <i class="fa-solid fa-briefcase"></i> <a href="project.html">Projects </a></li>
+            <li> <i class="fa-solid fa-comments active"></i> <a href="contact.html" class="active">Contact </a></li>
+        </ul>
     </nav>
 
     <div class="color-switcher">
@@ -242,11 +55,9 @@
         <div class="theme-btn-container">
             <span class="theme-btn" data-color="rgb(0, 147, 245)" style=" background: rgb(0, 147, 245)"></span>
             <span class="theme-btn" data-color="#ff0000" style=" background: red"></span>
-            <span class="theme-btn" data-color="#00ff04" style=" background: #00ff04"></span>
+            <span class="theme-btn" data-color="#00d304" style=" background: #00d304"></span>
             <span class="theme-btn" data-color="#ff00bb" style=" background: #ff00bb"></span>
-            <span class="theme-btn" data-color="#00ffee" style=" background: #00ffee"></span>
             <span class="theme-btn" data-color="blueviolet" style=" background: blueviolet"></span>
-            <span class="theme-btn" data-color="gold" style=" background: gold"></span>
         </div>
     </div>
 
@@ -254,40 +65,65 @@
 
     <!-- Contact Section  -->
 
-    <section class="contact">
-        <div class="left">
-            <div class="link-box">
-                <h1> Contact <span>Me</span> </h1>
-                <div class="social-links">
-                    <h3>
-                        <i class="fa-brands fa-instagram fa-xl"></i>
-                        vinay_kumar781
-                    </h3>
-                    <h3>
-                        <i class="fa-solid fa-phone fa-xl"></i>
-                        +91-9917723570
-                    </h3>
-                    <h3>
-                        <i class="fa-brands fa-linkedin fa-xl"></i>
-                        N/A
-                    </h3>
-                    <h3>
-                        <i class="fa-brands fa-github fa-xl"></i>
-                        vinaykumar3570
-                    </h3>
-                    <h3 class="home">
-                        <i class="fa-solid fa-house"></i>
-                        Vill - Nangla Mukhtyarpur Mawana Road
-                        Meerut 250001 UP, India.
-                    </h3>
+    <section class="contact d-flex justify-center align-center">
+        <h1 data-aos="fade-up"> Contact <span>Me</span> </h1>
+        <p data-aos="fade-up">
+            Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+        </p>
+        <div class="top">
+            <div class="contact-detail d-flex justify-center align-center">
+                <div class="address margin d-flex align-center" data-aos="fade-right">
+                    <div class="icon d-flex justify-center align-center">
+                        <i class="fas fa-home d-flex justify-center align-center"></i>
+                    </div>
+                    <div class="address-name d-flex justify-center align-center">
+                        <h4> Address </h4>
+                    </div>
+                    <div class="address-detail d-flex justify-center">
+                        <p> Nangla Mukhtyarpur Mawana Road, Meerut</p>
+                    </div>
+                </div>
+                <div class="call margin d-flex  align-center" data-aos="fade-up">
+                    <div class="icon d-flex justify-center align-center">
+                        <i class="fas fa-phone d-flex justify-center align-center"></i>
+                    </div>
+                    <div class="tel-name d-flex justify-center align-center">
+                        Telephone
+                    </div>
+                    <div class="tel-number d-flex justify-center">
+                        <p> +91-9917723570 </p>
+                    </div>
+                </div>
+                <div class="email margin d-flex align-center" data-aos="fade-up">
+                    <div class="icon d-flex justify-center align-center">
+                        <i class="fas fa-envelope d-flex justify-center align-center"></i>
+                    </div>
+                    <div class="email-name d-flex justify-center align-center">
+                        E-mail
+                    </div>
+                    <div class="email-detail d-flex justify-center">
+                        <p>vinay2192000@gmail.com</p>
+                    </div>
+                </div>
+                <div class="github margin d-flex align-center" data-aos="fade-left">
+                    <div class="icon d-flex justify-center align-center">
+                        <i class="fa-brands fa-github d-flex justify-center align-center"></i>
+                    </div>
+                    <div class="github-name d-flex justify-center align-center">
+                        Github
+                    </div>
+                    <div class="github-detail d-flex justify-center">
+                        <p> Vinaykumar3570 </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="right">
-            <form action="#">
+        <div class="bottom">
+            <form action="#" data-aos="fade-up">
                 <input type="text" class="text" placeholder="Your Name..." autocomplete="off">
                 <input type="email" name="" id="email" class="text" placeholder="Your Email..." autocomplete="off">
-                <textarea name="" id="" cols="30" rows="7" placeholder="Your Message..." class="text" autocomplete="off"></textarea>
+                <textarea name="" id="" cols="30" rows="7" placeholder="Your Message..." class="text"
+                    autocomplete="off"></textarea>
                 <button type="submit"> Send Message </button>
             </form>
         </div>
@@ -297,7 +133,17 @@
     <script src="js/script.js"></script>
 
     <!-- jQuery Link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- Scroll Animation JS link  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> About Me </title>
 
+    <!-- Scroll Animation CSS link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
     <!-- FontAwesome link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -20,511 +23,10 @@
     <!-- CSS Link  -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- About CSS link -->
+    <link rel="stylesheet" href="css/about.css">
 
 
-    <style>
-        body {
-            background: var(--tertiary-color);
-        }
-
-        /* About Section Styles  */
-
-        .about h1 {
-            font-size: 35px;
-            color: var(--white-color);
-            text-align: center;
-            margin-top: 40px;
-        }
-        .about h1:before{
-            content: '';
-            display: block;
-            height: 3px ;
-            width: 200px;
-            border-radius: 50px;
-            background: var(--primary-color);
-            margin: 0 auto;
-            transform: translateY(54px);
-        }
-        .about h1:after{
-            content: '';
-            display: block;
-            height: 10px ;
-            width: 50px;
-            border-radius: 50px;
-            background: var(--primary-color);
-            margin: 0 auto;
-            transform: translateY(6px);
-        }
-
-
-        .about .intro {
-            height: auto;
-            width: 100%;
-            margin: 20px 0;
-            display: grid;
-            grid-template-columns: auto 300px;
-            gap: 20px;
-        }
-
-        .about .intro .left-intro {
-            height: 100%;
-        }
-
-        .about .intro .left-intro p {
-            font-size: 20px;
-            padding: 30px 60px;
-            color: var(--light-grey-color);
-            letter-spacing: 1.1px;
-            line-height: 35px;
-        }
-
-        .about .intro .right-intro {
-            height: 100%;
-        }
-
-        .about .intro .right-intro .profile-img {
-            height: 225px;
-            width: 175px;
-            margin: 20px 0 0 0px;
-            border-radius: 50%;
-            background-image: url("images/Group 1.png");
-            background-position: center center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            border: 2px solid var(--primary-color);
-            box-shadow: 0px 0px 10px var(--primary-color);
-        }
-
-        .about h2 {
-            color: var(--white-color);
-            font-size: 30px;
-            /* margin-top: 400px; */
-        }
-
-        /* Personal Info Styles     */
-
-        .personal-info {
-            height: 60vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .header {
-            width: 100%;
-            margin-bottom: 50px;
-            display: grid;
-            place-items: center;
-            text-align: center;
-        }
-
-        .header h2 {
-            color: var(--white-color);
-            font-size: 30px;
-            margin-top: 20px;
-        }
-        .header h2::after{
-            content: '';
-            display: block;
-            width: 200px;
-            height: 2px;
-            margin: 10px auto;
-            background: #fff;
-        }
-
-        .info {
-            width: 80%;
-            height: 50vh;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-
-        .info-box {
-            font-size: 20px;
-            color: var(--light-grey-color);
-        }
-
-        .info-box b {
-            color: var(--grey-color);
-        }
-
-        /* Skills CSS Properties  */
-
-        .skill-section {
-            width: 100%;
-            height: auto;
-            padding: 80px 10%;
-            color: var(--light-grey-color);
-        }
-
-        .skill-main {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 50px;
-        }
-
-        .skill-main .skill-bar .skill-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 10px;
-            font-size: 16px;
-        }
-
-        .skill-bar .skill-info p:nth-child(2) {
-            font-weight: 500;
-        }
-
-        .skill-bar .bar {
-            width: 100%;
-            height: 10px;
-            background-color: var(--darkest-color);
-            border-radius: 25px;
-            margin-top: 5px;
-            position: relative;
-        }
-
-        .skill-bar .bar span {
-            width: 50%;
-            height: 100%;
-            position: absolute;
-            background-color: #ff5405;
-            border-radius: 25px;
-        }
-
-        .skill-bar .bar .html {
-            width: 90%;
-            animation: html 2s;
-        }
-
-        .skill-bar .bar .css {
-            width: 60%;
-            animation: css 2s;
-        }
-
-        .skill-bar .bar .JavaScript {
-            width: 40%;
-            animation: css 2s;
-        }
-
-        .skill-bar .bar .BootStrap {
-            width: 70%;
-            animation: css 2s;
-        }
-
-        .skill-bar .bar .jQuery {
-            width: 65%;
-            animation: react 2s;
-        }
-
-        .skill-bar .bar .Tailwind {
-            width: 40%;
-            animation: node 2s;
-        }
-
-
-
-
-
-        /* Education Styles  */
-
-        .timeline-area {
-            margin: 90px 200px;
-            max-width: 900px;
-            border-left: 2px solid var(--darkest-color);
-            padding: 0 20px 0 30px;
-        }
-
-        div.timeline {
-            background-color: var(--darkest-color);
-            color: var(--light-grey-color);
-            padding: 10px 25px;
-            font-size: 15px;
-            width: 100%;
-            border: 1px solid var(--darkest-color);
-            line-height: 1.7;
-            position: relative;
-            margin-bottom: 50px;
-            border-radius: 5px;
-
-        }
-
-        div.timeline:before {
-            content: '';
-            display: block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: var(--darkest-color);
-            border: 3px solid var(--white-color);
-            position: absolute;
-            left: -40px;
-
-        }
-
-        div.timeline:after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-color: transparent var(--darkest-color) transparent transparent;
-            border-width: 8px;
-            position: absolute;
-            left: -17px;
-            top: 10px;
-
-        }
-
-        div.timeline h4 {
-            text-transform: capitalize;
-            color: var(--grey-color);
-            font-weight: 100;
-        }
-
-        div.timeline h3 {
-            font-weight: 100;
-        }
-
-        div.timeline h2 {
-            text-transform: uppercase;
-        }
-
-        /* footer Section  */
-
-        footer{
-            width: 100%;
-            background: var(--darkest-color);
-            height: 100px;
-            color: var(--light-grey-color);
-        }
-        footer .row1{
-            height: 50%;
-            width: 100%;
-            display: flex;
-        }
-        footer .row1 .logo{
-            width: 30%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            padding-left: 10px;
-        }
-        footer .row1 .links{
-            width:40%;
-            height: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-
-        }
-        footer a{
-            font-size: 15px;
-            text-decoration: none;
-            color: rgb(240, 240, 240);
-            transition: all .5s;
-        }
-        footer a:hover{
-            color: var(--primary-color);
-        }
-        footer .row1 .icons{
-            width: 30%;
-            height: 100%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            font-size: 25px;
-        }
-        footer i{
-            margin: 0 10px 0;
-            cursor: pointer;
-            transition: all .5s;
-        }
-        footer i:hover{
-            color: var(--primary-color);
-        }
-        footer .row2{
-            height: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 16px;
-        }
-
-
-        /* Mobile View Section  */
-
-        @media screen and (max-width:574px) {
-            .about h1 {
-                font-size: 35px;
-            }
-
-            .about .intro {
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: auto 300px;
-                gap: 20px;
-            }
-
-            .about .left-intro {
-                height: auto;
-            }
-
-            .about .intro .left-intro p {
-                padding: 40px;
-            }
-
-            .about .intro .right-intro {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            /* Personal Info  */
-
-            .personal-info {
-                margin-top: 150px;
-            }
-
-            .header h2 {
-                font-size: 30px;
-            }
-
-            .info {
-                height: auto;
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(2, 1fr);
-                gap: 10px;
-            }
-
-            .info-box {
-                font-size: 20px;
-                margin: 5px 0 0 20px;
-            }
-
-            /* Skills Section  */
-
-            .skill-section {
-                padding: 120px 10%;
-            }
-
-            .skill-main {
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(2, 1fr);
-                gap: 30px;
-            }
-
-            .skill-bar {
-                margin-bottom: 30px;
-            }
-
-            /* Education Section  */
-
-            .timeline-area {
-                margin: 90px 10px 90px 50px;
-                width: auto;
-                border-left: 2px solid var(--darkest-color);
-                padding: 0 20px 0 30px;
-            }
-
-            div.timeline {
-                background-color: var(--darkest-color);
-                color: var(--light-grey-color);
-                padding: 10px 25px;
-                font-size: 16px;
-                width: 100%;
-                border: 1px solid var(--darkest-color);
-                line-height: 1.7;
-                position: relative;
-                margin-bottom: 50px;
-                border-radius: 5px;
-
-            }
-
-            div.timeline:before {
-                content: '';
-                display: block;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: var(--darkest-color);
-                border: 3px solid var(--white-color);
-                position: absolute;
-                left: -40px;
-
-            }
-
-            div.timeline:after {
-                content: '';
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-color: transparent var(--darkest-color) transparent transparent;
-                border-width: 8px;
-                position: absolute;
-                left: -17px;
-                top: 10px;
-
-            }
-
-            div.timeline h4 {
-                text-transform: capitalize;
-                color: var(--grey-color);
-                font-weight: 100;
-            }
-
-            div.timeline h3 {
-                font-weight: 100;
-            }
-
-            div.timeline h2 {
-                text-transform: uppercase;
-            }
-
-            /* footer Section  */
-
-            footer{
-                height: 300px;
-            }
-            footer .row1{
-                height: 80%;
-                flex-direction: column;
-            }
-           footer .row1 .logo{
-                width: 100%;
-                height: 20%;
-                justify-content: center;
-            }
-           footer .row1 .links{
-                flex-direction: column;
-                height: 60%;
-                width: 100%;
-            }
-           footer .row1 .icons{
-                height: 20%;
-                width: 100%;
-                justify-content: center;
-            }
-            footer .row2{
-                height: 20%;
-            }
-
-
-        }
-
-        @media screen and (max-width:990px) and (min-width:575px) {
-            .timeline-area {
-                margin: 90px 10px 90px 50px;
-            }
-
-        }
-    </style>
 </head>
 
 <body>
@@ -554,11 +56,9 @@
         <div class="theme-btn-container">
             <span class="theme-btn" data-color="rgb(0, 147, 245)" style=" background: rgb(0, 147, 245)"></span>
             <span class="theme-btn" data-color="#ff0000" style=" background: red"></span>
-            <span class="theme-btn" data-color="#00ff04" style=" background: #00ff04"></span>
+            <span class="theme-btn" data-color="#00d304" style=" background: #00d304"></span>
             <span class="theme-btn" data-color="#ff00bb" style=" background: #ff00bb"></span>
-            <span class="theme-btn" data-color="#00ffee" style=" background: #00ffee"></span>
             <span class="theme-btn" data-color="blueviolet" style=" background: blueviolet"></span>
-            <span class="theme-btn" data-color="gold" style=" background: gold"></span>
         </div>
     </div>
 
@@ -566,19 +66,40 @@
     <!-- *** About Section *** -->
 
     <section class="about">
-        <h1> About <span>Me</span></h1>
+        <h1 data-aos="fade-up"> About <span>Me</span></h1>
         <div class="intro">
-            <div class="left-intro">
+            <div class="left-intro" data-aos="fade-right">
                 <p> Hello ! Myself <span>Vinay Kumar</span>. To be a part of Studies & Professional that provides me
                     with a challenging environment as well as the learning and experience. As a Computer Science
                     Graduate Pursuing Student with knowledge of Web Development and many more Skills , looking for an
-                    Job. Bringing Proficient knowledge of various Programing languages , Creativeness , Excellent
-                    Communication and interpersonal Skills ..</p>
+                    Job. Bringing Proficient knowledge of various Programing languages , Creativeness , Good
+                    Communication and interpersonal Skills.
+                </p>
             </div>
-            <div class="right-intro">
+            <div class="right-intro" data-aos="fade-left">
                 <div class="profile-img">
 
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experince">
+        <div class="card-container">
+            <div class="card card1"  data-aos="fade-right">
+                <i class="fa fa-book"></i>
+                <h2 class="counter">30</h2>
+                <h4> Completed Project  </h4>
+            </div>
+            <div class="card card2" data-aos="fade-up">
+                <i class="fa fa-users"></i>
+                <h2 class="counter"> 2 </h2>
+                <h4> Years of Experience </h4>
+            </div>
+            <div class="card card3"  data-aos="fade-left">
+                <i class="fa fa-briefcase"></i>
+                <h2 class="counter"> 1 </h2>
+                <h4> Happy Customers </h4>
             </div>
         </div>
     </section>
@@ -587,22 +108,16 @@
 
     <section class="personal-info">
         <div class="header personal-head">
-            <h2> Personal <span>Info</span></h2>
+            <h2 data-aos="fade-up"> Personal <span>Info</span></h2>
 
 
         </div>
-        <div class="info">
+        <div class="info" data-aos="fade-right">
             <div class="info-box info-box1">
-                <b>First Name : </b> Vinay
-            </div>
-            <div class="info-box info-box2">
-                <b>Last Name : </b> Kumar
+                <b>Name : </b> Vinay kumar
             </div>
             <div class="info-box info-box3">
                 <b>DOB : </b> 21/09/2003
-            </div>
-            <div class="info-box info-box4">
-                <b>Age : </b>19 years
             </div>
 
             <div class="info-box info-box6">
@@ -630,9 +145,9 @@
 
     <section class="skill-section">
         <div class="header skill-header">
-            <h2> My <span> Skills </span> </h2>
+            <h2 data-aos="fade-up" class="skill"> My <span> Skills </span> </h2>
         </div>
-        <div class="skill-main">
+        <div class="skill-main" data-aos="fade-up">
             <div class="skill-bar">
                 <div class="skill-info">
                     <p>HTML</p>
@@ -680,24 +195,68 @@
             </div>
             <div class="skill-bar">
                 <div class="skill-info">
-                    <p>Tailwind</p>
+                    <p>Figma</p>
                     <p>40%</p>
                 </div>
                 <div class="bar">
-                    <span class="Tailwind"></span>
+                    <span class="figma"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section  -->
+    <section class="service">
+        <h2 data-aos="fade-up">Servi<span>ces</span></h2>
+        <!-- <p data-aos="fade-up">"Web development services: design, front/back-end dev, CMS integration, responsive design, -->
+            <!-- SEO, support, security."</p> -->
+        <div class="services-container">
+            <div class="service service1" data-aos="fade-right">
+                <div class="logo">
+                    <i class="fas fa-mobile-screen-button"></i>
+                </div>
+                <div class="name">
+                    <h3> Responsive Website </h3>
+                </div>
+                <div class="detail">
+                    A responsive website that is created by me that is useful for finding number.
+                </div>
+            </div>
+            <div class="service service2" data-aos="fade-up">
+                <div class="logo">
+                    <i class="fas fa-pen-fancy"></i>
+                </div>
+                <div class="name">
+                    <h3> Web Design </h3>
+                </div>
+                <div class="detail">
+                    A responsive website that is created by me that is useful for finding number.
+                </div>
+            </div>
+            <div class="service service3" data-aos="fade-left">
+                <div class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="name">
+                    <h3> Web Development </h3>
+                </div>
+                <div class="detail">
+                    A responsive website that is created by me that is useful for finding number.
                 </div>
             </div>
         </div>
     </section>
 
 
+
+
     <!-- Education Section  -->
 
     <div class="header">
-        <h2> Educa<span>tion</span> </h2>
+        <h2 data-aos="fade-up" class="education"> Educa<span>tion</span> </h2>
 
     </div>
-    <section class="timeline-area">
+    <section class="timeline-area" data-aos="fade-up">
 
         <div class="timeline">
             <h2> B.Sc. hons. Computer Science </h2>
@@ -733,12 +292,12 @@
             </div>
             <div class="icons">
                 <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
                 <i class="fa-brands fa-instagram"></i>
             </div>
         </div>
         <div class="row2">
-            &copy; 2013 Your Company. All rights resered.
+            Copyright &copy; 2020. All rights reserved. Designed by Vinay kumar
         </div>
     </footer>
     </section>
@@ -750,6 +309,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
         integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Scroll Animation JS link  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+
+<!-- for Counter Animation  -->
+ <!-- jQuery link  -->
+ <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+ <!-- Counter js link  -->
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>    <script src="jquery.counterup.min.js"></script>
+ <script src="counter/jquery.counterup.min.js"></script>
+
+ <script>
+     $(document).ready(function () {
+         $('.counter').counterUp({
+             delay: 10,
+             time: 1000
+         });
+     })
+ </script>
+
 </body>
 
 </html>

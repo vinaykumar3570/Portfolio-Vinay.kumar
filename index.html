@@ -8,6 +8,9 @@
     <title> Portfolio | Vinay kumar</title>
 
 
+    <!-- Scroll Animation CSS link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
     <!-- FontAwesome link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -130,17 +133,15 @@
             <div class="theme-btn-container">
                 <span class="theme-btn" data-color="rgb(0, 147, 245)" style=" background: rgb(0, 147, 245)"></span>
                 <span class="theme-btn" data-color="#ff0000" style=" background: red"></span>
-                <span class="theme-btn" data-color="#00ff04" style=" background: #00ff04"></span>
+                <span class="theme-btn" data-color="#00d304" style=" background: #00d304"></span>
                 <span class="theme-btn" data-color="#ff00bb" style=" background: #ff00bb"></span>
-                <span class="theme-btn" data-color="#00ffee" style=" background: #00ffee"></span>
                 <span class="theme-btn" data-color="blueviolet" style=" background: blueviolet"></span>
-                <span class="theme-btn" data-color="gold" style=" background: gold"></span>
             </div>
         </div>
 
 
         <header>
-            <div class="left">
+            <div class="left" data-aos="fade-right">
                 <h2> HELLO ! </h2>
                 <h1> I'm <span> VINAY KUMAR</span> </h1>
                 <p>
@@ -149,10 +150,10 @@
 
                 </p>
 
-                <a href="Vinay-kumar-resume.pdf" target="_blank"><button>Download CV</button></a>
+                <a href="Vinay-kumar-resume.pdf" target="_blank"><button><h4>Download CV</h4></button></a>
                 <!-- <button type=submit class="btn btn-danger" onclick=" window.open('file:////C:\Users\data'); return true;"> PDF </button> -->
             </div>
-            <div class="right">
+            <div class="right" data-aos="fade-left">
                 <img src="images/Group 1.png" alt="">
             </div>
 
@@ -168,6 +169,12 @@
         integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Scroll Animation JS link  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

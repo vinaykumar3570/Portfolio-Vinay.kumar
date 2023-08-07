@@ -297,6 +297,10 @@
             flex-direction: column;
             margin-top: 50px;
         }
+        .contact > p{
+            width: 90%;
+            margin-bottom: -30px;
+        }
 
         .link-box h1 {
             text-align: center;
@@ -307,11 +311,13 @@
             width: 90%;
             height: auto;
         }
+        form{
+            width: 110%;
+        }
 
         form button {
             height: 50px;
             margin-bottom: 50px;
-
         }
 
 

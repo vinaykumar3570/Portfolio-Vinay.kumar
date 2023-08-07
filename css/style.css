@@ -21,7 +21,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+    display: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -44,7 +44,7 @@ nav {
     background: hsla(219, 100%, 11%, 0.3);
     position: sticky;
     top: 0;
-    height: 13vh;
+    height: 80px;
     width: 100%;
     box-shadow: 1px 1px 5px var(--light-grey-color);
     z-index: 1;

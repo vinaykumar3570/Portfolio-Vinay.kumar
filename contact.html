@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us</title>
 
+        <!-- Navigation Animation CSS link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
 
     <!-- Scroll Animation CSS link  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -37,12 +41,12 @@
         <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
         </label>
-        <label for="" class="logo"> Portfolio </label>
+        <label for="" class="logo wow animate__animated animate__fadeInUp" data-wow-delay="50ms"> Portfolio </label>
         <ul>
-            <li> <i class="fa-solid fa-house"></i> <a href="index.html">Home </a></li>
-            <li> <i class="fa-solid fa-user"></i> <a href="about.html">About </a></li>
-            <li> <i class="fa-solid fa-briefcase"></i> <a href="project.html">Projects </a></li>
-            <li> <i class="fa-solid fa-comments active"></i> <a href="contact.html" class="active">Contact </a></li>
+            <li class=" wow animate__animated animate__fadeInUp" data-wow-delay="0ms"> <i class="fa-solid fa-house"></i> <a href="index.html">Home </a></li>
+            <li class=" wow animate__animated animate__fadeInUp" data-wow-delay="150ms"> <i class="fa-solid fa-user"></i> <a href="about.html">About </a></li>
+            <li class=" wow animate__animated animate__fadeInUp" data-wow-delay="300ms"> <i class="fa-solid fa-briefcase"></i> <a href="project.html">Projects </a></li>
+            <li class=" wow animate__animated animate__fadeInUp" data-wow-delay="450ms"> <i class="fa-solid fa-comments active"></i> <a href="contact.html" class="active">Contact </a></li>
         </ul>
     </nav>
 
@@ -142,8 +146,17 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        AOS.init();
+        AOS.init({
+            delay:200
+        });
       </script>
+
+
+    <!-- Navigation Animation js link  -->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

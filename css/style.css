@@ -261,7 +261,7 @@ header .left button::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .7s;
+    transition: .7s;
 
 }
 

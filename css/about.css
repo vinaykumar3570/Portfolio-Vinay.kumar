@@ -243,32 +243,32 @@ section.experince{
 }
 
 .skill-bar .bar .html {
-    width: 90%;
+    width: 80%;
     animation: html 2s;
 }
 
 .skill-bar .bar .css {
-    width: 60%;
+    width: 65%;
     animation: css 2s;
 }
 
 .skill-bar .bar .JavaScript {
-    width: 40%;
+    width: 45%;
     animation: css 2s;
 }
 
 .skill-bar .bar .BootStrap {
-    width: 70%;
+    width: 60%;
     animation: css 2s;
 }
 
 .skill-bar .bar .jQuery {
-    width: 65%;
+    width: 47%;
     animation: react 2s;
 }
 
 .skill-bar .bar .figma {
-    width: 40%;
+    width: 57%;
     animation: node 2s;
 }
 

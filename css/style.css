@@ -6,7 +6,7 @@
     text-decoration: none;
     list-style: none;
     letter-spacing: 1.1px;
-    user-select: none;
+    /* user-select: none; */
 }
 
 :root {

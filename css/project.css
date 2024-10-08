@@ -87,7 +87,7 @@ body {
     font-weight: 100;
 }
 
-.project-container .main-box .btn-container button {
+.project-container .main-box .btn-container a.link {
     height: 50px;
     width: 50px;
     border: 2px solid var(--primary-color);
@@ -96,26 +96,19 @@ body {
     cursor: pointer;
     transition: all .3s ease-in;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.project-container .main-box .btn-container button.github {
-    background: var(--primary-color);
-    color: var(--white-color);
-}
 
-.project-container .main-box .btn-container button.github:hover {
-    background: transparent;
-    color: var(--primary-color);
-
-}
-
-.project-container .main-box .btn-container button.link {
+.project-container .main-box .btn-container a.link {
     background: transparent;
     color: var(--primary-color);
     border: 2px solid var(--primary-color)
 }
 
-.project-container .main-box .btn-container button.link:hover {
+.project-container .main-box .btn-container a.link:hover {
     background: var(--primary-color);
     color: var(--white-color);
 }

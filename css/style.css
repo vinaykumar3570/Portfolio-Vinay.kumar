@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: sans-serif;
     text-decoration: none;
     list-style: none;
@@ -28,7 +29,8 @@
 ::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: var(--tertiary-color);
-    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, .3)
+    -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, .3);
+            box-shadow: inset 0px 0px 6px rgba(0, 0, 0, .3)
 }
 
 ::-webkit-scrollbar-thumb {
@@ -39,6 +41,7 @@
 
 main {
     min-height: 10vh;
+    background-image: -o-linear-gradient(345deg, var(--tertiary-color) 75%, var(--primary-color) 75%);
     background-image: linear-gradient(105deg, var(--tertiary-color) 75%, var(--primary-color) 75%);
 }
 
@@ -48,7 +51,8 @@ nav {
     top: 0;
     height: 80px;
     width: 100%;
-    box-shadow: 1px 1px 5px var(--light-grey-color);
+    -webkit-box-shadow: 1px 1px 5px var(--light-grey-color);
+            box-shadow: 1px 1px 5px var(--light-grey-color);
     z-index: 1;
 
     backdrop-filter: blur(15px);
@@ -77,6 +81,8 @@ nav ul li {
 
 nav ul li i.fa-solid {
     display: none;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
@@ -99,23 +105,35 @@ nav ul li a::before {
     margin: 0 auto;
     height: 3px;
     background: var(--primary-color);
-    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 nav ul li a::before {
     bottom: -3px;
-    transform-origin: right;
+    -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+            transform-origin: right;
 }
 
 nav ul li a::after {
     top: -3px;
-    transform-origin: left;
+    -webkit-transform-origin: left;
+        -ms-transform-origin: left;
+            transform-origin: left;
 }
 
 nav ul li a:hover::after,
 nav ul li a:hover::before {
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
 }
 
 nav ul li a:hover {
@@ -123,7 +141,9 @@ nav ul li a:hover {
 }
 
 nav ul li a.active::before {
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
 }
 
 .checkbtn {
@@ -156,6 +176,8 @@ nav ul li a.active::before {
         display: block;
         color: var(--white-color);
         margin-top: 15px;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
         transition: all .5s;
         padding: 0 10px;
 
@@ -175,6 +197,8 @@ nav ul li a.active::before {
         top: 80px;
         left: -100%;
         text-align: center;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
         transition: all .5s;
         padding: 50px 0;
         z-index: 1;
@@ -184,8 +208,12 @@ nav ul li a.active::before {
         display: block;
         margin: 40px 0;
         line-height: 0px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     nav ul li a {
@@ -204,6 +232,8 @@ nav ul li a.active::before {
 header {
     height: 87vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: var(--white-color);
 }
@@ -211,9 +241,16 @@ header {
 header .left {
     width: 50%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-left: 60px;
     padding-right: 20px;
     /* border: 2px solid red; */
@@ -237,6 +274,8 @@ header .left p {
 
 header .left button {
     height: 50px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     background: transparent;
     border: 2px solid var(--primary-color);
@@ -260,9 +299,17 @@ header .left button::after {
     position: absolute;
     top: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: .7s;
+    -o-transition: .7s;
     transition: .7s;
 
 }
@@ -275,8 +322,12 @@ header .left .social-links{
     height: 50px;
     width: 200px;
     margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 header .left .social-links .link{
     height: 50px;
@@ -286,13 +337,21 @@ header .left .social-links .link{
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 header .left .social-links .link i{
     font-size: 22px;
     color: var(--primary-color);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 header .left .social-links .link:hover i{
@@ -308,6 +367,8 @@ header .left .social-links .link::before{
     position: absolute;
     top: 0;
     left: -100%;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
     transition: all .4s;
     z-index: -1;
 }
@@ -322,10 +383,19 @@ span {
 header .right {
     width: 50%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 50px;
     /* border: 2px solid yellow; */
 }
@@ -334,7 +404,8 @@ header .right img {
     height: 70%;
     margin-left: 30px;
     border-radius: 20px;
-    box-shadow: 4px 4px 15px -2px #000e25;
+    -webkit-box-shadow: 4px 4px 15px -2px #000e25;
+            box-shadow: 4px 4px 15px -2px #000e25;
 }
 
 
@@ -349,6 +420,8 @@ header .right img {
     padding: 0px;
     background: var(--darkest-color);
     z-index: 100;
+    -webkit-transition: all .7s ease;
+    -o-transition: all .7s ease;
     transition: all .7s ease;
     /* padding: 50px 0; */
     /* border-radius:50% */
@@ -380,19 +453,33 @@ header .right img {
 }
 
 .color-switcher .switcher-btn i {
-    animation: rotate 2s linear infinite;
+    -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+    }
 }
 
 @keyframes rotate {
     100% {
-        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
     }
 }
 
 .color-switcher .theme-btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .color-switcher .theme-btn-container .theme-btn {
